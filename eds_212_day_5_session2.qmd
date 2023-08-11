@@ -4,4 +4,59 @@ format: html
 editor: visual
 ---
 
-## 
+```{r}
+library(tidyverse)
+```
+
+## Some logical operators
+
+-   == (does this match? )
+
+-   != (do these NOT match)
+
+-   \>, \<,\<=,\>=
+
+-   &, \| (\| for OR)
+
+```{r}
+#DOES 4 MATCH 5
+4 == 5
+
+4 == 4
+#DOES 4 NOT MATCH 5?
+
+4 != 5
+
+4 > 5
+
+4<5
+
+4<=5
+
+4>=5
+
+# Does 4 the number match "4"?
+
+4 == "4"
+
+cat <- 10
+dog <- 7
+
+cat == dog
+
+# Is dog > cat, OR is cat less than 20
+# Only one of these has to be true for it to be TRUE
+
+dog>cat | cat<20
+
+#Is DOG LESS THEN CAT AND CAT = 10
+(dog < cat) & (cat == 10)
+
+# All must be true for it to return as TRUE
+(dog < cat) & (cat>2) & (4>= dog)
+```
+
+```{r}
+
+ggplot(data = mtcars,aes( x = wt, y =mpg)) + geom_point(color = "red",aes(size = mpg)) + labs(x = "Car Weight(1000 pounds", y = "Gas mileage (mpg)", title = "Car weight efficiency relationship")
+```
